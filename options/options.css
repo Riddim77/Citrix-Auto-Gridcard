@@ -1,0 +1,44 @@
+.gc-row {
+  display: flex;
+}
+
+.gc-row input {
+  width: 40px;
+  min-width: 40px;
+  border: 0;
+  background-color: lightblue;
+  margin: 1px;
+  text-transform: uppercase;
+}
+
+.gc-table-label {
+  width: 40px;
+  min-width: 40px;
+  background-color: royalblue;
+  text-align: center;
+  margin: 1px;
+  font-weight: bold;
+  color: white;
+}
+
+.gc-table-label-blank {
+  background-color: transparent;
+}
+
+.gc-buttons {
+  margin-top: 1.5rem;
+}
+
+#gc-message {
+  margin-left: 1rem;
+}
+
+#gc-message .success {
+  font-weight: bold;
+  color: green;
+}
+
+#gc-message .error {
+  font-weight: bold;
+  color: red;
+}

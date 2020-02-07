@@ -1,0 +1,41 @@
+{
+  "manifest_version": 2,
+  "name": "Citrix Auto Gridcard",
+  "version": "1.1",
+
+  "description": "Automatically enters grid card data into the form on Citrix login.",
+  "homepage_url": "https://github.com/Riddim77/Citrix-Auto-Gridcard",
+
+  "icons": {
+    "48": "icons/grid-48b.png",
+    "96": "icons/grid-96b.png"
+  },
+
+  "web_accessible_resources": ["icons/grid-48w.png", "icons/settings-48w.png"],
+
+  "permissions": ["https://mycloud.bayer.biz/*", "activeTab", "storage"],
+
+  "options_ui": {
+    "page": "options/options.html",
+    "browser_style": true,
+    "chrome_style": true
+  },
+
+  "background": {
+    "scripts": ["background.js"]
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://mycloud.bayer.biz/cgi/login*"],
+      "js": ["content.js"]
+    }
+  ],
+
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "cagc@jajut.com",
+      "strict_min_version": "57.0a1"
+    }
+  }
+}
